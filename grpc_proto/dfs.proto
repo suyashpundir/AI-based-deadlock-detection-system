@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package dfs;
+
+service DFSService {
+    rpc StoreChunk(StoreChunkRequest) returns (StoreChunkResponse);
+    rpc RetrieveChunk(RetrieveChunkRequest) returns (RetrieveChunkResponse);
+    rpc ReplicateChunk(ReplicateChunkRequest) returns (ReplicateChunkResponse);
+}
+
+message StoreChunkRequest {
+    int32 file_id = 1;
+    int32 chunk_index = 2;
+    bytes chunk_data = 3;
+    string checksum = 4;
+}
+
+message StoreChunkResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+message RetrieveChunkRequest {
+    int32 file_id = 1;
+    int32 chunk_index = 2;
+}
+
+message RetrieveChunkResponse {
+    bool success = 1;
+    bytes chunk_data = 2;
+    string message = 3;
+}
+
+message ReplicateChunkRequest {
+    int32 file_id = 1;
+    int32 chunk_index = 2;
+    int32 target_node_id = 3;
+}
+
+message ReplicateChunkResponse {
+    bool success = 1;
+    string message = 2;
+}

@@ -1,0 +1,12 @@
+# Ignore Python cache & compiled files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+
+# Ignore gRPC-generated files (optional)
+grpc_proto/*.py
+
+# Ignore any temporary files
+*.log
