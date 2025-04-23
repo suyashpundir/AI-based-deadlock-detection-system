@@ -13,10 +13,11 @@ AI Powered Deadlock Detection System
 🔒 Safe & Scalable: Designed for integration in large-scale distributed and multithreaded environments.
 
 
-Author
-Suyash Pundir
+Author:
 
-Bhavesh Rajput
+1.Suyash Pundir
 
-Shaurya Singh
+2.Bhavesh Rajput
+
+3.Shaurya Singh
 
